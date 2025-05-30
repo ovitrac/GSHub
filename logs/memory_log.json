@@ -1,0 +1,20 @@
+{
+  "memory": [
+    {
+      "timestamp": "2025-05-29T09:00:00",
+      "problem_id": "P0001",
+      "agent": "gsagent",
+      "action": "simulate",
+      "kernel": "radigen.solve",
+      "input": {
+        "mixture": "methyl_oleate",
+        "temp": 60,
+        "oxygen": 0.21,
+        "time": 72
+      },
+      "output_summary": "Simulation completed successfully. Concentration curves and radical fluxes generated.",
+      "status": "archived"
+    }
+  ]
+}
+

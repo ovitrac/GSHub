@@ -1,0 +1,18 @@
+{
+  "id": "P0001",
+  "question": "How does methyl oleate oxidize at 60°C over 3 days?",
+  "context": "Stability of unsaturated FAMEs in biodiesel storage conditions",
+  "tools": ["radigen.solve"],
+  "prompt": "Simulate the oxidation kinetics of methyl oleate at 60°C with ambient oxygen level (21%) over 72 hours.",
+  "input": {
+    "mixture": "methyl_oleate",
+    "temp": 60,
+    "oxygen": 0.21,
+    "time": 72
+  },
+  "response": null,
+  "status": "pending",
+  "review": null,
+  "forks": []
+}
+

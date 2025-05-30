@@ -1,0 +1,21 @@
+{
+  "radigen.solve": {
+    "inputs": ["mixture", "temp", "oxygen", "time"],
+    "outputs": ["concentration_curves", "radical_fluxes"],
+    "description": "Simulates radical oxidation kinetics for given chemical mixtures using mass action and diffusion-corrected models.",
+    "tags": ["oxidation", "kinetics", "chemistry", "radicals"]
+  },
+  "sfppy.evaluate": {
+    "inputs": ["material", "food", "temperature", "duration"],
+    "outputs": ["migration_profile", "compliance_status"],
+    "description": "Estimates chemical migration from food contact materials and checks EU regulatory compliance.",
+    "tags": ["migration", "compliance", "food safety"]
+  },
+  "sig2dna.encode": {
+    "inputs": ["signal", "scales"],
+    "outputs": ["dna_sequence", "motifs"],
+    "description": "Encodes analytical signals (e.g., GC-MS, NMR) into symbolic DNA-like sequences using wavelet transforms.",
+    "tags": ["signal", "symbolic", "wavelet", "encoding"]
+  }
+}
+
