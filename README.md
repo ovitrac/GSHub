@@ -15,16 +15,24 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [💡 1 | Preamble](#-1--preamble)
+- [🤔 1 | Preamble](#-1--preamble)
+  - [✎ᝰ. 1.1 |Indistinguishability Through Formalism](#%E2%9C%8E%E1%9D%B0-11-indistinguishability-through-formalism)
+  - [🫀 1.2 |The Core Problem](#-12-the-core-problem)
+  - [✅ 1.3 | New Core Principles](#-13--new-core-principles)
 - [🌍 2 | Purpose](#-2--purpose)
 - [🎯 3 | Vision](#-3--vision)
 - [🧱 4 | Bricks (Simulation Kernels)](#-4--bricks-simulation-kernels)
 - [🧠 5 | Problem Archive](#-5--problem-archive)
+  - [💬 5.1 | Examples of Questions](#-51--examples-of-questions)
+  - [☝️ 5.2 | Open Questions](#-52--open-questions)
 - [🔁 6 | Mutual Intelligence Workflow](#-6--mutual-intelligence-workflow)
 - [🧭 7 | Contribution Guidelines](#-7--contribution-guidelines)
 - [🗺️ 8 | Roadmap](#-8--roadmap)
 - [🙌 9 | Why This Matters](#-9--why-this-matters)
 - [✅ 🔭 10 | What’s Next](#--10--whats-next)
+  - [📁 Directory Structure](#-directory-structure)
+  - [✊ Feedback Loop](#-feedback-loop)
+  - [🔁 Mutual Intelligence Loop](#-mutual-intelligence-loop)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
