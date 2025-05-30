@@ -76,9 +76,16 @@ Reference: [Understanding Gödel’s Incompleteness Theorems](https://plato.stan
 🏗 Meanwhile, **science/engineering workflows** are:
 
 - **Cumulative** — reuse and refine past results.
+
 - **Modular** — combine multiple tools, theories, simulations.
+
 - **Purposeful** — aimed at explaining, predicting, or solving real problems.
+
 - **Reflexive** — driven by peer feedback and critique.
+
+  
+
+---
 
 
 
@@ -95,6 +102,8 @@ This includes:
 - 🔗 Links to upstream/downstream kernels
 - 🏷️ Tags, ratings, purpose
 
+---
+
 #### 🎼 1.3.2 | **Composable Kernels**
 
 > ⚙️ Each tool (e.g., `radigen`, `SFPPy`, `sig2dna`) is a **brick** that can be composed, pipelined, or hybridized.
@@ -105,6 +114,8 @@ This requires:
 - 🎛️ Interface schema + description of I/O
 - 🧩 Composability maps: what links to what
 
+---
+
 #### 🔱1.3.3 | **Forkable Intelligence**
 
 > 👥 Users and agents should **fork or remix existing solutions**.
@@ -114,6 +125,8 @@ This requires:
 - 🔖 Versioning of prompts, responses, and workflows
 - 🌿 Fork trees or problem lineages
 - ✍ Annotations from users (insight, bug, validation)
+
+---
 
 #### 🎓 1.3.4 |Technical/ **Scientific Peer Review**
 
@@ -139,7 +152,7 @@ Modern language models can code, simulate, and explain—but they forget everyth
 - Humans and agents **co-develop knowledge**: every question and answer becomes training data for both humans and machines
 - Problems are **archived, refined, and solved** through modular kernels
 
-We enable a **Generative Simulation (GS) framework** where science and engineering workflows are encoded into prompt chains, reviewed, and reused.
+> We enable a **Generative Simulation (GS) framework** where science and engineering workflows are encoded into prompt chains, reviewed, and reused.
 
 
 
@@ -218,6 +231,8 @@ Contributors can add problems in `problems/`, structured as:
   "forks": []
 }
 ```
+
+---
 
 ### ☝️ 5.2 | Open Questions
 
