@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚀 Contrastive Deep Learning in Generative Simulation (GS) &mdash; 🤖 GS-HostAgents 0.15 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f41d0df0"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true, "tags": "ams"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="🔬 Contrastive Scaling Laws in Diffusivity Using Neural Networks" href="ContrastiveScalingD.html" />
+    <link rel="prev" title="🤖 GS-Agent: Generative Simulation Intelligence Hub" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            🤖 GS-HostAgents
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">🤖 GS-Agent: Generative Simulation Intelligence Hub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">🚀 Contrastive Deep Learning in Generative Simulation (GS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#abstract">🧠 Abstract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gs-agents-and-simulation-reasoning">1️⃣ GS-Agents and Simulation Reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motivation-scaling-laws-in-sparse-data">2️⃣ Motivation: Scaling Laws in Sparse Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contrastive-gs-principles-and-interpretations">3️⃣ Contrastive GS: Principles and Interpretations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#learning-from-log-ratios">🔄 3.1 Learning from Log-Ratios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#relation-to-generalized-derivatives">📐 3.2 Relation to Generalized Derivatives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dimensionality-reduction-and-scaling-structure">4️⃣ Dimensionality Reduction and Scaling Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vaschy-buckingham-pi-theorem">✨ 4.1 Vaschy-Buckingham <span class="math notranslate nohighlight">\(\pi\)</span>-Theorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pca-and-pcoa-in-log-transformed-spaces">✨ 4.2 PCA and PCoA in Log-Transformed Spaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sparse-additive-models-for-scaling">✨ 4.3 Sparse Additive Models for Scaling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#methodological-synthesis">5️⃣ Methodological Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visual-architecture">6️⃣ Visual Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#future-directions">7️⃣ Future Directions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">🧩 Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ContrastiveScalingD.html">🔬 Contrastive Scaling Laws in Diffusivity Using Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_doc_SFPPy.html">📘 Kernel Documentation: sfppy.evaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_doc_radigen.html">📘 Kernel Documentation: radigen.solve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_doc_sig2dna.html">📘 Kernel Documentation: sig2dna.encode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">🤖 GS-HostAgents</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🚀 Contrastive Deep Learning in Generative Simulation (GS)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Constrastive_Deep-Learning.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="contrastive-deep-learning-in-generative-simulation-gs">
+<h1>🚀 Contrastive Deep Learning in Generative Simulation (GS)<a class="headerlink" href="#contrastive-deep-learning-in-generative-simulation-gs" title="Link to this heading"></a></h1>
+<section id="abstract">
+<h2>🧠 Abstract<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<p>This document proposes a methodological framework for integrating <strong>contrastive deep learning</strong> within the <strong>GenerativeSimulation (GS)</strong> paradigm. GS-agents are language-guided agents equipped with simulation kernels (e.g., SFPPy, Radigen, Pizza3) that respond to user prompts by executing simulations. We demonstrate how contrastive models—trained on <strong>ratios</strong> rather than absolute values—can efficiently recover scaling laws from sparse simulation outputs. This approach enhances traceability, interpretability, and generalization and enables GS to bridge symbolic physics-based models with machine-learned surrogates.</p>
+<blockquote>
+<div><p>This document proposes a methodological framework for integrating <strong>contrastive deep learning</strong> within the <strong>GenerativeSimulation (GS)</strong> paradigm. GS-agents are language-guided agents equipped with simulation kernels (e.g., SFPPy, Radigen, Pizza3) that respond to user prompts by executing simulations. We demonstrate how contrastive models—trained on <strong>ratios</strong> rather than absolute values—can efficiently recover scaling laws from sparse simulation outputs. This approach enhances traceability, interpretability, and generalization and enables GS to bridge symbolic physics-based models with machine-learned surrogates.</p>
+<p><strong>Contrastive GS</strong> is developed to support fast-reasoning when the simulation dataset is incomplete or when kernels cannot directly provide an answer to complex engineering or scientific questions. <strong>Contrastive GS</strong> can be operated by GS-agents based on data available on a <strong>GS-hub</strong>.</p>
+<p>We additionally explore connections to dimensionality reduction (e.g., PCA in log-space, Vaschy-Buckingham theorem) and sparse additive modeling. Contrastive GS is positioned as a hybrid modeling framework between symbolic reasoning and empirical prediction.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="gs-agents-and-simulation-reasoning">
+<h2>1️⃣ GS-Agents and Simulation Reasoning<a class="headerlink" href="#gs-agents-and-simulation-reasoning" title="Link to this heading"></a></h2>
+<p><strong>GenerativeSimulation (GS)</strong> is a hybrid computing paradigm in which <strong>language-first agents</strong> (GS-agents) handle simulation-based reasoning. Agents are connected to domain-specific kernels that operate simulations in:</p>
+<ul class="simple">
+<li><p>🐍 Native Python environments (e.g., <code class="docutils literal notranslate"><span class="pre">SFPPy</span></code>, <code class="docutils literal notranslate"><span class="pre">Radigen</span></code>), or</p></li>
+<li><p>🔧 Cascading environments that manipulate input templates (e.g., <code class="docutils literal notranslate"><span class="pre">DSCRIPT</span></code> in <code class="docutils literal notranslate"><span class="pre">Pizza3</span></code>) before calling external codes (e.g., LAMMPS).</p></li>
+</ul>
+<p>GS-agents operate within a <strong>sandboxed</strong> context: they do not submit hardware jobs but interpret and diagnose the results. Their conclusions are marked by <strong>pertinence</strong>, including:</p>
+<ul class="simple">
+<li><p>✅ Relevance/failure status</p></li>
+<li><p>📊 Degree of acceptability</p></li>
+<li><p>🔍 Explanation of physical significance</p></li>
+</ul>
+<p>To limit computational cost, agents follow a <strong>tiered strategy</strong>:</p>
+<ol class="arabic simple">
+<li><p>Begin with coarse-grained or conservative assumptions.</p></li>
+<li><p>Refine step-by-step if necessary.</p></li>
+<li><p>Terminate early if an answer is confidently derived.</p></li>
+</ol>
+<p>All decisions are <strong>traceable</strong> and logged. Past simulations can be:</p>
+<ul class="simple">
+<li><p>🔁 Reused or recombined,</p></li>
+<li><p>🤝 Shared across agents,</p></li>
+<li><p>👩‍⚖️ Reviewed by human supervisors via <strong>GS-hubs</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>GS-hubs</strong> serve as peer-review platforms that enhance and curate simulation logic, training datasets, and modeling protocols.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="motivation-scaling-laws-in-sparse-data">
+<h2>2️⃣ Motivation: Scaling Laws in Sparse Data<a class="headerlink" href="#motivation-scaling-laws-in-sparse-data" title="Link to this heading"></a></h2>
+<p>In many simulation settings:</p>
+<ul class="simple">
+<li><p>📐 The input space is high-dimensional: <span class="math notranslate nohighlight">\(\mathbf{x} = (x_1, \dots, x_n)\)</span></p></li>
+<li><p>🧪 Outputs <span class="math notranslate nohighlight">\(y_k = f(\mathbf{x}_k)\)</span> are scalar and observed at limited <span class="math notranslate nohighlight">\(\mathbf{x}_k\)</span></p></li>
+<li><p>📏 Some input variables span several orders of magnitude</p></li>
+</ul>
+<p>Many problems exhibit <strong>self-similarity</strong> or <strong>scaling laws</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{f(\mathbf{x}_u)}{f(\mathbf{x}_v)} \propto \prod_i \left(\frac{x_{i,u}}{x_{i,v}}\right)^{a_i^{(u,v)}}
+\]</div>
+<p>Here, the <strong>exponents</strong> <span class="math notranslate nohighlight">\(a_i^{(u,v)}\)</span> are not constant globally, but tend to be:</p>
+<ul class="simple">
+<li><p>🧭 Stable within <strong>local domains</strong></p></li>
+<li><p>⚖️ Governed by structure, symmetries, or conservation laws</p></li>
+</ul>
+<p>The strategy of <strong>contrastive learning</strong> builds predictive models using the log-ratio:</p>
+<div class="math notranslate nohighlight">
+\[
+\log\left(\frac{f_u}{f_v}\right) \approx \sum_i a_i^{(u,v)} \cdot \log\left(\frac{x_{i,u}}{x_{i,v}}\right)
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(m\)</span> simulations, one may derive up to <span class="math notranslate nohighlight">\(m(m-1)/2\)</span> independent ratios, vastly improving learning capacity.</p>
+</section>
+<hr class="docutils" />
+<section id="contrastive-gs-principles-and-interpretations">
+<h2>3️⃣ Contrastive GS: Principles and Interpretations<a class="headerlink" href="#contrastive-gs-principles-and-interpretations" title="Link to this heading"></a></h2>
+<section id="learning-from-log-ratios">
+<h3>🔄 3.1 Learning from Log-Ratios<a class="headerlink" href="#learning-from-log-ratios" title="Link to this heading"></a></h3>
+<p>Instead of modeling <span class="math notranslate nohighlight">\(f(\mathbf{x})\)</span> directly, Contrastive GS models <strong>scaling transformations</strong>:</p>
+<ul class="simple">
+<li><p>🧮 Inputs: <span class="math notranslate nohighlight">\(\Delta_i = \log(x_{i,u} / x_{i,v})\)</span>, or <span class="math notranslate nohighlight">\((1/T_u - 1/T_v)\)</span> for temperatures</p></li>
+<li><p>🎯 Target: <span class="math notranslate nohighlight">\(\log(f_u / f_v)\)</span></p></li>
+</ul>
+<p>This focuses on <strong>relative change</strong>, not absolute behavior.</p>
+</section>
+<section id="relation-to-generalized-derivatives">
+<h3>📐 3.2 Relation to Generalized Derivatives<a class="headerlink" href="#relation-to-generalized-derivatives" title="Link to this heading"></a></h3>
+<p>This contrastive formulation mimics <strong>directional derivatives</strong>:</p>
+<p>If <span class="math notranslate nohighlight">\(\mathbf{x}_u\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}_v\)</span> lie on a generalized trajectory,
+then <span class="math notranslate nohighlight">\(\log(f_u / f_v)\)</span> quantifies directional acceleration along that path.</p>
+<p>This resonates with:</p>
+<ul class="simple">
+<li><p>🔗 Lie algebraic structures</p></li>
+<li><p>🌊 Flow-like interpretation of simulations</p></li>
+<li><p>🧲 Conservative physical systems</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="dimensionality-reduction-and-scaling-structure">
+<h2>4️⃣ Dimensionality Reduction and Scaling Structure<a class="headerlink" href="#dimensionality-reduction-and-scaling-structure" title="Link to this heading"></a></h2>
+<section id="vaschy-buckingham-pi-theorem">
+<h3>✨ 4.1 Vaschy-Buckingham <span class="math notranslate nohighlight">\(\pi\)</span>-Theorem<a class="headerlink" href="#vaschy-buckingham-pi-theorem" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>🔣 Dimensional analysis constructs dimensionless quantities <span class="math notranslate nohighlight">\(\pi_i = \prod_j x_j^{\alpha_{ij}}\)</span></p></li>
+<li><p>🔄 If <span class="math notranslate nohighlight">\(f = g(\pi_1, ..., \pi_r)\)</span>, then contrastive inputs are aligned with log-ratios of <span class="math notranslate nohighlight">\(\pi\)</span> terms</p></li>
+<li><p>🧠 Suggests built-in alignment with physical constraints</p></li>
+<li></li>
+</ul>
+</section>
+<section id="pca-and-pcoa-in-log-transformed-spaces">
+<h3>✨ 4.2 PCA and PCoA in Log-Transformed Spaces<a class="headerlink" href="#pca-and-pcoa-in-log-transformed-spaces" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>📉 Applying <strong>PCA</strong> or <strong>PCoA</strong> to <span class="math notranslate nohighlight">\(\log(x_{i,u}/x_{i,v})\)</span> uncovers <strong>principal axes of variation</strong></p></li>
+<li><p>🌀 <strong>PCoA</strong> (Principal Coordinates Analysis) may be more robust with non-Euclidean or semimetric distance measures</p></li>
+<li><p>🛠️ These transformations help compress features before feeding them to contrastive models</p></li>
+</ul>
+</section>
+<section id="sparse-additive-models-for-scaling">
+<h3>✨ 4.3 Sparse Additive Models for Scaling<a class="headerlink" href="#sparse-additive-models-for-scaling" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>🧩 Sparse scaling models assume:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\log\left(\frac{f_u}{f_v}\right) \approx \sum_{i \in S} g_i\left(\log\left(\frac{x_{i,u}}{x_{i,v}}\right)\right)
+\]</div>
+<ul class="simple">
+<li><p>🧵 Only a subset <span class="math notranslate nohighlight">\(S\)</span> of variables is relevant</p></li>
+<li><p>🕵️ These models offer interpretability and facilitate feature selection</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="methodological-synthesis">
+<h2>5️⃣ Methodological Synthesis<a class="headerlink" href="#methodological-synthesis" title="Link to this heading"></a></h2>
+<p>Contrastive GS combines <strong>symbolic insight</strong> with <strong>data-driven generalization</strong>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>⚙️ Physics-based Kernels</p></th>
+<th class="head"><p>🤖 Empirical ML Models</p></th>
+<th class="head"><p>🧬 Contrastive GS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Symbolic equations</p></td>
+<td><p>Black-box models</p></td>
+<td><p>Scaling structure via log-ratios</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hard-coded dependencies</p></td>
+<td><p>Flexible pattern recognition</p></td>
+<td><p>Physically aligned, data-efficient</p></td>
+</tr>
+<tr class="row-even"><td><p>Idealized assumptions</p></td>
+<td><p>Overfitting risks</p></td>
+<td><p>Interpretable exponents, domain-adaptive</p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p>“<strong>Contrastive GS bridges symbolic kernels and black-box inference by recovering scaling logic embedded in numerical experiments.</strong>”</p>
+</div></blockquote>
+<p>This enables:</p>
+<ul class="simple">
+<li><p>🔁 Reuse of sparse simulations for broader extrapolation</p></li>
+<li><p>🌐 Learning local scaling regimes and hybrid surrogates</p></li>
+<li><p>🔍 Grounding black-box predictions in physical reasoning</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="visual-architecture">
+<h2>6️⃣ Visual Architecture<a class="headerlink" href="#visual-architecture" title="Link to this heading"></a></h2>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+    A[🧑‍💻 User Prompt] --&gt;|Query| B[🤖 GS-Agent]
+    B --&gt; C{⚙️ Kernel Type}
+    C --&gt;|Python-native| D[🧪 Radigen / SFPPy]
+    C --&gt;|Cascading| E[📦 Pizza3 / LAMMPS]
+    D --&gt; F[📊 Simulation Results]
+    E --&gt; F
+    F --&gt; G[🔁 Contrastive Learning Layer]
+    G --&gt; H[📈 Scaling Laws]
+    H --&gt; I[🧾 Answer with Explanation]
+    G --&gt; J[📂 Training Dataset Augmentation]
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="future-directions">
+<h2>7️⃣ Future Directions<a class="headerlink" href="#future-directions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>🧭 Partition input space into domains of local exponents</p></li>
+<li><p>🔢 Apply symbolic regression to learned scaling structures</p></li>
+<li><p>🎲 Couple contrastive learning with uncertainty estimation</p></li>
+<li><p>🧮 Extend to multi-output and vector-valued simulations</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h2>🧩 Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>Contrastive deep learning offers a powerful method to reveal <strong>scaling laws</strong> from simulation outputs, even under data sparsity. In the context of <strong>GenerativeSimulation</strong>, this approach unifies symbolic modeling and black-box prediction. It provides a structured, interpretable, and efficient path for enhancing simulation-based reasoning, setting a foundation for next-generation scientific agents.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="README.html" class="btn btn-neutral float-left" title="🤖 GS-Agent: Generative Simulation Intelligence Hub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ContrastiveScalingD.html" class="btn btn-neutral float-right" title="🔬 Contrastive Scaling Laws in Diffusivity Using Neural Networks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Olivier Vitrac (Generative Simulation).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -340,6 +340,8 @@ Help us build the machine that helps us think.
 2. The LLM agent tries to simulate or explain
 3. We log the outcome and improve prompts, code, and documentation
 
+> Starting from version 0.15, LLM agents are equipped with Machine-Learning capacity to analyze accumulated results and to evaluate how the the new results fit or not within within the whole picture. The aim is to reduce redundancy and to generate early alert on exotic results.
+
 ---
 
 ### 🔁 Mutual Intelligence Loop
@@ -349,3 +351,4 @@ Human ⇄ Prompt ⇄ GSagent ⇄ Kernels ⇄ Output ⇄ Archive ⇄ Peer Review 
 ```
 
 We start with prompts, but we **move toward models that remember**, reflect, and suggest new questions.
+
