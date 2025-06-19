@@ -352,3 +352,6 @@ Human ⇄ Prompt ⇄ GSagent ⇄ Kernels ⇄ Output ⇄ Archive ⇄ Peer Review 
 
 We start with prompts, but we **move toward models that remember**, reflect, and suggest new questions.
 
+---
+
+[GenerativeSimulation](https://github.com/ovitrac/generativeSimulation) | olivier.vitrac@gmail.com | v. 0.15

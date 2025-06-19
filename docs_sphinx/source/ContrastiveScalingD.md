@@ -37,7 +37,7 @@ We show that contrastive deep learning can bridge symbolic physical kernels and 
 
 > 📚 **References:**
 >
-> These models are not foundational in a unified theory of mass transport in glassy and rubber polymers based on free volume, cohesive energy, and thermodynamic fluctuations. They are described in detail in:
+> These models are  foundational in the unified theory of mass transport in glassy and rubber polymers based on free volume, cohesive energy, and thermodynamic fluctuations. They are described in detail in:
 >
 > 1.  Xiaoyi Fang, Sandra Domenek, Violette Ducruet, Matthieu Réfrégiers, and Olivier Vitrac.  
 >     *Diffusion of Aromatic Solutes in Aliphatic Polymers above Glass Transition Temperature.*  
